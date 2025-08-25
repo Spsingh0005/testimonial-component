@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Sample</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .msg_testimonial {
+        position: relative;
+        width: 18rem;
+
+        background-color: #333;
+        color: whitesmoke;
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      .msg_testimonial::after {
+        position: absolute;
+        content: "";
+        bottom: -5%;
+        left: 14%;
+        height: 15px;
+        width: 15px;
+        background-color: #333;
+        transform: rotate(45deg);
+      }
+      .msg_testimonial p {
+        margin-bottom: 1rem;
+        line-height: 1.3;
+      }
+      .msg_testimonial p:last-child {
+        margin-bottom: 0;
+      }
+      .person_data {
+        width: 18rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .person_data img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-left: 5px;
+      }
+      .testimonial_card {
+        position: relative;
+        width: 20rem;
+        color: #333;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid black;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 3rem 2rem;
+      }
+      .testimonial_card p {
+        margin-bottom: 24px;
+        font-family: cursive;
+      }
+      .testimonial_card_img {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+      .testimonial_card_img img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-left: 5px;
+      }
+      .textimonial_card_content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 2px;
+      }
+      .textimonial_card_content p {
+        margin: 0;
+      }
+      .big_image_card {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 2rem;
+      }
+      .big_image_card_character {
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .big_image_card_content {
+        width: 27rem;
+        height: 15rem;
+        background-color: #333;
+        color: whitesmoke;
+        border-radius: 12px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .big_image_card_content h2 {
+        font-size: 1.5rem;
+      }
+      .big_image_card_content h4 {
+        color: gray;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .stars {
+        display: flex;
+        gap: 0;
+      }
+      .stars img {
+        width: 2rem;
+      }
+      .big_image_card_content p {
+        line-height: 1.3;
+        letter-spacing: 0.5px;
+        font-family: cursive;
+      }
+      .multiple_testimonial_card {
+        position: relative;
+        width: 45rem;
+        color: #333;
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid black;
+      }
+      .multiple_testimonial_card p {
+        font-family: cursive;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .multiple_testimonial_card .main_img {
+        height: 80px;
+        width: 80px;
+      }
+      .multiple_card_img {
+        text-align: center;
+      }
+      .multiple_card_img img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-left: 5px;
+      }
+      .multiple_testimonial_card .side_img {
+        opacity: 0.5;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 75%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #333;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .arrow.left {
+        left: 25%;
+      }
+
+      .arrow.right {
+        right: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- msg testimonial -->
+      <div style="display: flex; gap: 5rem">
+        <section>
+          <div class="msg_testimonial">
+            <div class="popup_block">
+              <p>
+                I have been solving all the project ideas on roadmap.sh and I am
+                surprised how far i have come from where i started.
+              </p>
+              <p>Highly recommended!</p>
+            </div>
+          </div>
+          <div class="person_data">
+            <img src="./images/girl.jpg" alt="girl_image" />
+            <div>
+              <h4>Artem Jones</h4>
+              <p>Junior Frontend Developer</p>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonial card -->
+        <section>
+          <div class="testimonial_card">
+            <p>
+              Since starting my career in 2021, I have only followed one
+              resource, roadmap.sh, it truly helped me go from 0 to having a job
+              and changing the financial trajectory of my family
+            </p>
+            <div class="testimonial_card_img">
+              <img src="./images/girl.jpg" alt="girl_image" />
+              <div class="textimonial_card_content">
+                <h4>Artem Jones</h4>
+                <p>Junior Frontend Developer</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Third type -->
+      <div>
+        <section class="big_image_card">
+          <img
+            src="./images/girl.jpg"
+            class="big_image_card_character"
+            alt="girl image"
+          />
+          <div class="big_image_card_content">
+            <div class="stars">
+              <img src="./images/gold_star_tr.png" alt="golden star" />
+              <img src="./images/gold_star_tr.png" alt="golden star" />
+              <img src="./images/gold_star_tr.png" alt="golden star" />
+              <img src="./images/gold_star_tr.png" alt="golden star" />
+              <img src="./images/gold_star_tr.png" alt="golden star" />
+            </div>
+            <h2>Jackie Mackle</h2>
+            <h4>Engineering Manager</h4>
+            <p>
+              I find myself recommending roadmap.sh to all the internees or
+              junior developers. It's a greate way to skill up and grow in your
+              career.
+            </p>
+          </div>
+        </section>
+        <!-- Multiple testimonial -->
+        <section>
+          <div class="multiple_testimonial_card">
+            <p>
+              roadmap.sh is an incredible resource. I was fortunate to discover
+              it <br />
+              during my university days in 2018. Back then, it was just a single
+              <br />
+              repository with three images. It's amazing to see how much impact
+              it <br />
+              has had on millions of lives since then.
+            </p>
+            <!-- left arrow -->
+            <span class="arrow left">&#10094;</span>
+            <div class="multiple_card_img">
+              <img class="side_img" src="./images/girl.jpg" alt="girl_image" />
+              <img class="main_img" src="./images/girl.jpg" alt="girl_image" />
+              <img class="side_img" src="./images/girl.jpg" alt="girl_image" />
+            </div>
+            <!-- right arrow -->
+            <span class="arrow right">&#10095;</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
